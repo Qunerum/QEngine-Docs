@@ -8,7 +8,8 @@
 <!-- TOP BAR -->
 <header class="topbar">
   <div class="logo">QEngine Documentation</div>
-  <a href="pl/index.html" class="lang-btn" title="Polska wersja">🇵🇱</a>
+  <a href="pl/cli.html" class="lang-btn" title="Polska wersja">🇵🇱</a>
+
 </header>
 
 <!-- LAYOUT -->
@@ -16,7 +17,7 @@
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
-    <a href="index.html">Introduction</a>
+    <a class="this">Introduction</a>
     <a href="en/cli.html">CLI</a>
     <h3>Namespaces</h3>
     <a href="en/pages/engine.html">QEngine</a>
@@ -31,11 +32,15 @@
     <p>QEngine is a game engine written entirely in C#. It uses Avalonia for rendering, allowing applications to run across multiple platforms.</p>
     <p>The engine was designed with a focus on simple and direct game development, without relying on a built-in graphical editor. QEngine does not use a visual GUI editor, unlike popular engines such as Unity, Unreal Engine, or Godot.</p>
     <p>Project management is handled through the command line, using dedicated CLI commands responsible for:</p>
-    <p>- creating projects,</p>
-    <p>- searching for projects on disk</p>
-    <p>- building applications</p>
-    <p>- running games</p>
+    <ul>
+        <li><p>creating projects,</p></li>
+        <li><p>searching for projects on disk,</p></li>
+        <li><p>building applications,</p></li>
+        <li><p>running games.</p></li>
+    </ul>  
     <p>QEngine is actively developed, with its features continuously improved and expanded.</p>
+    <p class="note">The API may change in future versions of the engine.</p>
+
   </main>
 
 </div>

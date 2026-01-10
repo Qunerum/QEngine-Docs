@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>QEngine Docs - Mathematics</title>
@@ -29,26 +28,41 @@
 
   <!-- CONTENT -->
   <main class="content">
-    <h1>Welcome to QEngine</h1>
-    <p>
-      QEngine is a lightweight C# game engine focused on simplicity and control.
-    </p>
+    <h1>Typy i klasy</h1>
 
-    <h2>Example</h2>
+    <!-- Q MATH -->
+    <h2>QMath</h2>
+    <h3>Publiczne funkcje:</h3>
+    <pre><code class="language-cs">QMath.Remap(float value, float inMin, float inMax, float outMin, float outMax)
+<span class="green">// Remapuje wartość</span>
 
-    <pre><code class="language-cs">
-if (Input.Read(Key.Space))
-{
-    Console.WriteLine("Hello QEngine!");
-}
-        </code></pre>
+QMath.Round(float value, int decimals)
+<span class="green">// Zaokrągla float do podanej ilości liczb po przecinku.</span>
 
-    <p>
-      Use the navigation on the right to explore engine modules.
-    </p>
+QMath.Round(Vector2 value, int decimals)
+<span class="green">// Zaokrągla wartości w Vector2 do podanej ilości liczb po przecinku.</span></code></pre>
+
+    <h3>Lerp</h3>
+
+    <h4>Publiczne funkcje:</h4>
+    <pre><code class="language-cs">QMath.Lerp(float a, float b, float t) <span class="green">// Interpoluje liniowo pomiędzy a i b.</span></code></pre>
+    <pre><code class="language-cs">QMath.Lerp(Vector2 a, Vector2 b, float t) <span class="green">// Interpoluje liniowo pomiędzy a i b.</span></code></pre>
+
+    <p>Interpolacja liniowa pomiędzy dwoma wartościami typu <b>float</b> lub <b>Vector2</b>.</p>
+
+    <ul>
+      <li><b>a</b> – wartość początkowa</li>
+      <li><b>b</b> – wartość końcowa</li>
+      <li><b>t</b> – współczynnik interpolacji (0–1)</li>
+    </ul>
+    <p class="note info">Wartość <b>t</b> jest automatycznie ograniczana w zakresie 0–1.</p>
+
+    <h4>Użycie:</h4>
+    <pre><code class="language-cs">QMath.Lerp(0f, 10f, 0f)   <span class="green">// Wynik: 0</span>
+QMath.Lerp(0f, 10f, 0.5f) <span class="green">// Wynik: 5</span>
+QMath.Lerp(0f, 10f, 1f)   <span class="green">// Wynik: 10</span></code></pre>
+      
+
   </main>
-
 </div>
-
 </body>
-</html>

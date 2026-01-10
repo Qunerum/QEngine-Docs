@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>QEngine Docs - Input</title>
@@ -29,26 +28,21 @@
 
   <!-- CONTENT -->
   <main class="content">
-    <h1>Welcome to QEngine</h1>
-    <p>
-      QEngine is a lightweight C# game engine focused on simplicity and control.
-    </p>
+    <h1>Typy i klasy</h1>
 
-    <h2>Example</h2>
-
-    <pre><code class="language-cs">
-if (Input.Read(Key.Space))
-{
-    Console.WriteLine("Hello QEngine!");
-}
-        </code></pre>
-
-    <p>
-      Use the navigation on the right to explore engine modules.
-    </p>
+    <!-- INPUT -->
+    <h2>Input</h2>
+    <p>Input reprezentuje odczyt przycisków klawiatury oraz pozycji myszki.</p>
+    <h3>Publiczne pola:</h3>
+    <pre><code class="language-cs">Input.mousePosition <span class="green">// Vector2Int</span>
+<span class="green">// Pozycja kursora w oknie gry.</span>        
+        
+Input.mouseLeft <span class="green">// bool</span>
+<span class="green">// Stan naciśnięcia LPM.</span></code></pre>
+    <h3>Publiczne funkcje:</h3>
+    <pre><code class="language-cs">Input.Read(Key key) <span class="green">// Odczytuje stan przycisku klawiatury.</span>
+Input.ReadDown(Key key) <span class="green">// Odczytuje stan naciśnięcia przycisku klawiatury.</span></code></pre>
+      <p class="note info">ReadDown zwraca <b>true</b> tylko w klatce, w której klawisz został naciśnięty.</p>
   </main>
-
 </div>
-
 </body>
-</html>
