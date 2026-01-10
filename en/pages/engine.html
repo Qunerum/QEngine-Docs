@@ -1,161 +1,164 @@
 <!DOCTYPE html>
 <head>
-  <meta charset="UTF-8">
-  <title>QEngine Docs - QEngine</title>
-  <link rel="stylesheet" href="../../style.css">
+    <meta charset="UTF-8">
+    <title>QEngine Docs - QEngine</title>
+    <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
 
-<!-- TOP BAR -->
 <header class="topbar">
-  <div class="logo">QEngine Documentation</div>
-  <a href="../../en/pages/engine.html" class="lang-btn" title="English version">🇬🇧</a>
+    <div class="logo">QEngine Documentation</div>
+    <a href="../../pl/pages/engine.html" class="lang-btn" title="Polish version">🇵🇱</a>
 </header>
 
-<!-- LAYOUT -->
 <div class="layout">
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <a href="../../index.html">Introduction</a>
-    <a href="../cli.html">CLI</a>
-    <h3>Namespaces</h3>
-    <a class="this">QEngine</a>
-    <a href="gui.html">QEngine.GUI</a>
-    <a href="math.html">QEngine.Mathematics</a>
-    <a href="input.html">QEngine.Input</a>
-  </aside>
+    <aside class="sidebar">
+        <a href="../../index.html">Introduction</a>
+        <a href="../cli.html">CLI</a>
+        <h3>Namespaces</h3>
+        <a class="this">QEngine</a>
+        <a href="gui.html">QEngine.GUI</a>
+        <a href="math.html">QEngine.Mathematics</a>
+        <a href="input.html">QEngine.Input</a>
+    </aside>
 
-  <!-- CONTENT -->
-  <main class="content">
-    <h1>Typy i klasy</h1>
+    <main class="content">
+        <h1>Types and classes</h1>
 
-    <!-- VECTOR2 -->
-    <h2>Vector2</h2>
-    <p>Vector2 reprezentuje dwuwymiarowy wektor lub punkt w przestrzeni 2D.</p>
-    <p>Najczęściej używany do pozycji, rozmiarów, kierunków oraz obliczeń matematycznych.</p>
-    <h3>Publiczne pola:</h3>
-    <pre><code class="language-cs">Vector2.x <span class="green">// float</span>
-<span class="green">// Składowa X wektora</span>
-        
+        <h2>Vector2</h2>
+        <p>Vector2 represents a two-dimensional vector or point in 2D space.</p>
+        <p>Most commonly used for positions, sizes, directions, and mathematical calculations.</p>
+
+        <h3>Public fields:</h3>
+        <pre><code class="language-cs">Vector2.x <span class="green">// float</span>
+<span class="green">// X component of the vector</span>
+
 Vector2.y <span class="green">// float</span>
-<span class="green">// Składowa Y wektora</span></code></pre>
-    <h3>Konstruktor:</h3>
-    <pre><code class="language-cs">new Vector2(float x, float y) <span class="green">// Tworzy nowy wektor o podanych współrzędnych.</span></code></pre>
-    <h3>Operatory matematyczne:</h3>
-    <pre><code class="language-cs">new Vector2(8f, 1f) + new Vector2(5f, 3f) <span class="green">// Wynik: new Vector2(13f, 4f)</span>
-new Vector2(23f, 4f) - new Vector2(9.6f, 7.2f) <span class="green">// Wynik: new Vector2(13.4f, -2.8f)</span>
-new Vector2(3f, 5f) * new Vector2(9f, 6.1f) <span class="green">// Wynik: new Vector2(27f, 30.5f)</span>
-new Vector2(12f, 5f) * 3f <span class="green">// Wynik: new Vector2(36f, 15f)</span>
-new Vector2(50f, 27f) / new Vector2(5f, 3f) <span class="green">// Wynik: new Vector2(10f, 9f)</span>
-new Vector2(12f, -8f) / 4f <span class="green">// Wynik: new Vector2(3f, -2f)</span></code></pre>
-    <h3>Użycie:</h3>
-    <pre><code class="language-cs">Vector2 vector = new Vector2(5.2f, 9.4f); 
-<span class="green">// Tworzy wektor o współrzędnych (x: 5.2f , y: 9.4f)</span></code></pre>
+<span class="green">// Y component of the vector</span></code></pre>
 
-    <!-- VECTOR2 INT -->
-    <h2>Vector2Int</h2>
-    <p>Vector2Int reprezentuje dwuwymiarowy wektor lub punkt w przestrzeni 2D.</p>
-    <p>Najczęściej używany do pozycji, rozmiarów, kierunków oraz obliczeń matematycznych.</p>
-    <h3>Publiczne pola:</h3>
-    <pre><code class="language-cs">Vector2Int.x <span class="green">// int</span>
-<span class="green">// Składowa X wektora</span>
-        
+        <h3>Constructor:</h3>
+        <pre><code class="language-cs">new Vector2(float x, float y) <span class="green">// Creates a new vector with the given coordinates.</span></code></pre>
+
+        <h3>Math operators:</h3>
+        <pre><code class="language-cs">new Vector2(8f, 1f) + new Vector2(5f, 3f) <span class="green">// Result: new Vector2(13f, 4f)</span>
+new Vector2(23f, 4f) - new Vector2(9.6f, 7.2f) <span class="green">// Result: new Vector2(13.4f, -2.8f)</span>
+new Vector2(3f, 5f) * new Vector2(9f, 6.1f) <span class="green">// Result: new Vector2(27f, 30.5f)</span>
+new Vector2(12f, 5f) * 3f <span class="green">// Result: new Vector2(36f, 15f)</span>
+new Vector2(50f, 27f) / new Vector2(5f, 3f) <span class="green">// Result: new Vector2(10f, 9f)</span>
+new Vector2(12f, -8f) / 4f <span class="green">// Result: new Vector2(3f, -2f)</span></code></pre>
+
+        <h3>Usage:</h3>
+        <pre><code class="language-cs">Vector2 vector = new Vector2(5.2f, 9.4f);
+<span class="green">// Creates a vector with coordinates (x: 5.2f, y: 9.4f)</span></code></pre>
+
+        <h2>Vector2Int</h2>
+        <p>Vector2Int represents a two-dimensional vector or point in 2D space.</p>
+        <p>Most commonly used for positions, sizes, directions, and mathematical calculations.</p>
+
+        <h3>Public fields:</h3>
+        <pre><code class="language-cs">Vector2Int.x <span class="green">// int</span>
+<span class="green">// X component of the vector</span>
+
 Vector2Int.y <span class="green">// int</span>
-<span class="green">// Składowa Y wektora</span></code></pre>
-    <h3>Konstruktor:</h3>
-    <pre><code class="language-cs">new Vector2Int(int x, int y) <span class="green">// Tworzy nowy wektor o podanych współrzędnych.</span></code></pre>
-    <h3>Operatory matematyczne:</h3>
-    <pre><code class="language-cs">new Vector2Int(8, 1) + new Vector2Int(5, 3) <span class="green">// Wynik: new Vector2Int(13, 4)</span>
-new Vector2Int(23, 4) - new Vector2Int(9, 7) <span class="green">// Wynik: new Vector2Int(14, -3)</span>
-new Vector2Int(3, 5) * new Vector2Int(9, 6) <span class="green">// Wynik: new Vector2Int(27, 30)</span>
-new Vector2Int(12, 5) * 3 <span class="green">// Wynik: new Vector2Int(36, 15)</span></code></pre>
-    <h3>Użycie:</h3>
-    <pre><code class="language-cs">Vector2Int vector = new Vector2Int(3, 4); 
-<span class="green">// Tworzy wektor o współrzędnych (x: 3 , y: 4)</span></code></pre>
+<span class="green">// Y component of the vector</span></code></pre>
 
-    <!-- TRANSFORM -->
-    <h2>Transform</h2>
-    <p>Transform reprezentuje pozycję oraz skalę obiektu (bez rotacji).</p>
-    <h3>Publiczne pola:</h3>
-    <pre><code class="language-cs">Transform.position <span class="green">// Vector2</span>
-<span class="green">// Pozycja obiektu</span>
-        
+        <h3>Constructor:</h3>
+        <pre><code class="language-cs">new Vector2Int(int x, int y) <span class="green">// Creates a new vector with the given coordinates.</span></code></pre>
+
+        <h3>Usage:</h3>
+        <pre><code class="language-cs">Vector2Int vector = new Vector2Int(3, 4);
+<span class="green">// Creates a vector with coordinates (x: 3, y: 4)</span></code></pre>
+
+        <h2>Transform</h2>
+        <p>Transform represents the position and scale of an object (without rotation).</p>
+
+        <h3>Public fields:</h3>
+        <pre><code class="language-cs">Transform.position <span class="green">// Vector2</span>
+<span class="green">// Object position</span>
+
 Transform.scale <span class="green">// Vector2</span>
-<span class="green">// Skala obiektu</span></code></pre>
-    <h3>Użycie:</h3>
-    <pre><code class="language-cs">GameObject.transform
-<span class="green">// Pobiera transform z wybranego GameObject</span></code></pre>
-    <p class="note warn">⚠ Transform obecnie nie obsługuje rotacji.</p>
+<span class="green">// Object scale</span></code></pre>
 
-    <!-- QE SCENE -->
-    <h2>QEScene</h2>
-    <p>QEScene reprezentuje scenę.</p>
-    <h3>Publiczne pola:</h3>
-    <pre><code class="language-cs">QEScene.cameraPosition <span class="green">// Vector2</span>
-<span class="green">// Pozycja kamery</span></code></pre>
-    <h3>Publiczne funkcje:</h3>
-    <pre><code class="language-cs">QEScene.AddGameObject(GameObject obj) <span class="green">// Dodaje 'obj' do sceny.</span>
-QEScene.GetGameObjects() <span class="green">// Zwraca wszystkie obiekty ze sceny w formie List&lt;GameObject&gt;</span>
-QEScene.GetGameObject(string name) <span class="green">// Zwraca GameObject ze sceny o nazwie 'name'</span></code></pre>
-    <p class="note info">Metoda <code>Init()</code> jest wywoływana jednokrotnie podczas ładowania sceny.</p>
-    <h3>Użycie:</h3>
-    <pre><code class="language-cs">public class scena : QEScene <span class="green">// Tworzy nową scenę</span>         
+        <h3>Usage:</h3>
+        <pre><code class="language-cs">GameObject.transform
+<span class="green">// Gets the Transform from the selected GameObject</span></code></pre>
+
+        <p class="note warn">⚠ Transform currently does not support rotation.</p>
+
+        <h2>QEScene</h2>
+        <p>QEScene represents a scene.</p>
+
+        <h3>Public fields:</h3>
+        <pre><code class="language-cs">QEScene.cameraPosition <span class="green">// Vector2</span>
+<span class="green">// Camera position</span></code></pre>
+
+        <h3>Public methods:</h3>
+        <pre><code class="language-cs">QEScene.AddGameObject(GameObject obj) <span class="green">// Adds 'obj' to the scene.</span>
+QEScene.GetGameObjects() <span class="green">// Returns all objects in the scene as List&lt;GameObject&gt;</span>
+QEScene.GetGameObject(string name) <span class="green">// Returns a GameObject with the given name</span></code></pre>
+
+        <p class="note info">The <code>Init()</code> method is called once when the scene is loaded.</p>
+
+        <h3>Usage:</h3>
+        <pre><code class="language-cs">public class SceneExample : QEScene
 {
     public override void Init()
     {
-        <span class="green">// Wykonuje funkcje przy starcie</span>
+        <span class="green">// Executed on scene start</span>
     }
 }</code></pre>
 
-    <!-- QE SCRIPT -->
-    <h2>QEScript</h2>
-    <p>QEScript reprezentuje script do GameObject.</p>
-    <h3>Publiczne pola:</h3>
-    <pre><code class="language-cs">QEScript.scene <span class="green">// QEScene</span>
-<span class="green">// Aktualna scena</span>
-        
+        <h2>QEScript</h2>
+        <p>QEScript represents a script attached to a GameObject.</p>
+
+        <h3>Public fields:</h3>
+        <pre><code class="language-cs">QEScript.scene <span class="green">// QEScene</span>
+<span class="green">// Current scene</span>
+
 QEScript.gameObject <span class="green">// GameObject</span>
-<span class="green">// GameObject do którego jest przypisany script.</span>
-        
+<span class="green">// GameObject this script is attached to</span>
+
 QEScript.transform <span class="green">// Transform</span>
-<span class="green">// Transform z GameObject do którego jest przypisany script.</span></code></pre>
-    <h3>Użycie:</h3>
-    <pre><code class="language-cs">public class ExampleScript : QEScript <span class="green">// Tworzy nowy script</span>
+<span class="green">// Transform of the attached GameObject</span></code></pre>
+
+        <h3>Usage:</h3>
+        <pre><code class="language-cs">public class ExampleScript : QEScript
 {
     public override void Init()
     {
-        <span class="green">// Wykonuje funkcje przy starcie</span>
+        <span class="green">// Called on start</span>
     }
+
     public override void Update()
     {
-        <span class="green">// Wykonuje funkcje w każdej klatce</span>
-    }  
+        <span class="green">// Called every frame</span>
+    }
 }</code></pre>
-    <p>W scenie</p>
-    <pre><code class="language-cs">GameObject obj = new GameObject();
-obj.AddComponent&lt;QEScript&gt;();</code></pre>
 
-    <!-- GAME OBJECT -->
-    <h2>GameObject</h2>
-    <p>GameObject reprezentuje obiekt na scenie.</p>
-    <h3>Publiczne pola:</h3>
-    <pre><code class="language-cs">GameObject.name <span class="green">// string</span>
-<span class="green">// Nazwa obiektu.</span></code></pre>
-    <h3>Publiczne funkcje:</h3>
-    <pre><code class="language-cs">GameObject.AddComponent&lt;T&gt;() <span class="green">// Dodaje komponent do obiektu jeżeli go jeszcze nie posiada.</span>
-GameObject.GetComponent&lt;T&gt;() <span class="green">// Pobiera komponent z obiektu jeżeli go posiada.</span>
-<span class="type">bool</span> GameObject.TryGetComponent&lt;T&gt;(out T component)
-<span class="green">// Próbuje pobrać komponent typu T.</span>
-<span class="green">// Zwraca true, jeśli obiekt posiada komponent typu T.
-// Jeśli komponent istnieje, zostaje przypisany do zmiennej component.
-// W przeciwnym wypadku zwraca false.</span></code></pre>
-    <h3>Użycie:</h3>
-    <pre><code class="language-cs">GameObject obj = new GameObject();
-<span class="green">// Tworzy nowy GameObject na aktualnej scenie.</span>
-        
+        <h2>GameObject</h2>
+        <p>GameObject represents an object in the scene.</p>
+
+        <h3>Public fields:</h3>
+        <pre><code class="language-cs">GameObject.name <span class="green">// string</span>
+<span class="green">// Object name</span></code></pre>
+
+        <h3>Public methods:</h3>
+        <pre><code class="language-cs">GameObject.AddComponent&lt;T&gt;() <span class="green">// Adds a component if it does not already exist.</span>
+GameObject.GetComponent&lt;T&gt;() <span class="green">// Gets a component if it exists.</span>
+
+bool GameObject.TryGetComponent&lt;T&gt;(out T component)
+<span class="green">// Attempts to retrieve a component of type T.</span>
+<span class="green">// Returns true if the component exists and assigns it to 'component'.</span>
+<span class="green">// Otherwise returns false.</span></code></pre>
+
+        <h3>Usage:</h3>
+        <pre><code class="language-cs">GameObject obj = new GameObject();
+<span class="green">// Creates a new GameObject in the current scene.</span>
+
 GameObject obj2 = new GameObject("hello");
-<span class="green">// Tworzy nowy GameObject o nazwie "hello" na aktualnej scenie.</span></code></pre>
-  </main>
+<span class="green">// Creates a new GameObject named "hello" in the current scene.</span></code></pre>
+
+    </main>
 </div>
 </body>

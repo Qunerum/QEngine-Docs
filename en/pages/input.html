@@ -6,16 +6,13 @@
 </head>
 <body>
 
-<!-- TOP BAR -->
 <header class="topbar">
   <div class="logo">QEngine Documentation</div>
-  <a href="../../en/pages/input.html" class="lang-btn" title="English version">🇬🇧</a>
+  <a href="../../pl/pages/input.html" class="lang-btn" title="Polish version">🇵🇱</a>
 </header>
 
-<!-- LAYOUT -->
 <div class="layout">
 
-  <!-- SIDEBAR -->
   <aside class="sidebar">
     <a href="../../index.html">Introduction</a>
     <a href="../cli.html">CLI</a>
@@ -26,23 +23,25 @@
     <a class="this">QEngine.Input</a>
   </aside>
 
-  <!-- CONTENT -->
   <main class="content">
-    <h1>Typy i klasy</h1>
+    <h1>Types and classes</h1>
 
-    <!-- INPUT -->
     <h2>Input</h2>
-    <p>Input reprezentuje odczyt przycisków klawiatury oraz pozycji myszki.</p>
-    <h3>Publiczne pola:</h3>
+    <p>Input provides access to keyboard input and mouse position.</p>
+
+    <h3>Public fields:</h3>
     <pre><code class="language-cs">Input.mousePosition <span class="green">// Vector2Int</span>
-<span class="green">// Pozycja kursora w oknie gry.</span>        
-        
+<span class="green">// Cursor position in the game window.</span>
+
 Input.mouseLeft <span class="green">// bool</span>
-<span class="green">// Stan naciśnięcia LPM.</span></code></pre>
-    <h3>Publiczne funkcje:</h3>
-    <pre><code class="language-cs">Input.Read(Key key) <span class="green">// Odczytuje stan przycisku klawiatury.</span>
-Input.ReadDown(Key key) <span class="green">// Odczytuje stan naciśnięcia przycisku klawiatury.</span></code></pre>
-    <p class="note info">ReadDown zwraca <b>true</b> tylko w klatce, w której klawisz został naciśnięty.</p>
+<span class="green">// Left mouse button state.</span></code></pre>
+
+    <h3>Public methods:</h3>
+    <pre><code class="language-cs">Input.Read(Key key) <span class="green">// Reads keyboard key state.</span>
+Input.ReadDown(Key key) <span class="green">// Reads key press state.</span></code></pre>
+
+    <p class="note info">ReadDown returns <b>true</b> only on the frame the key was pressed.</p>
+
   </main>
 </div>
 </body>

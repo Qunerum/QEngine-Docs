@@ -6,16 +6,13 @@
 </head>
 <body>
 
-<!-- TOP BAR -->
 <header class="topbar">
   <div class="logo">QEngine Documentation</div>
-  <a href="../../en/pages/math.html" class="lang-btn" title="English version">🇬🇧</a>
+  <a href="../../pl/pages/math.html" class="lang-btn" title="Polish version">🇵🇱</a>
 </header>
 
-<!-- LAYOUT -->
 <div class="layout">
 
-  <!-- SIDEBAR -->
   <aside class="sidebar">
     <a href="../../index.html">Introduction</a>
     <a href="../cli.html">CLI</a>
@@ -26,42 +23,43 @@
     <a href="input.html">QEngine.Input</a>
   </aside>
 
-  <!-- CONTENT -->
   <main class="content">
-    <h1>Typy i klasy</h1>
+    <h1>Types and classes</h1>
 
-    <!-- Q MATH -->
     <h2>QMath</h2>
-    <h3>Publiczne funkcje:</h3>
+    <h3>Public methods:</h3>
     <pre><code class="language-cs">QMath.Remap(float value, float inMin, float inMax, float outMin, float outMax)
-<span class="green">// Remapuje wartość</span>
+<span class="green">// Remaps a value from one range to another.</span>
 
 QMath.Round(float value, int decimals)
-<span class="green">// Zaokrągla float do podanej ilości liczb po przecinku.</span>
+<span class="green">// Rounds a float to the given number of decimal places.</span>
 
 QMath.Round(Vector2 value, int decimals)
-<span class="green">// Zaokrągla wartości w Vector2 do podanej ilości liczb po przecinku.</span></code></pre>
+<span class="green">// Rounds Vector2 values to the given number of decimal places.</span></code></pre>
 
     <h3>Lerp</h3>
+    <h4>Public methods:</h4>
 
-    <h4>Publiczne funkcje:</h4>
-    <pre><code class="language-cs">QMath.Lerp(float a, float b, float t) <span class="green">// Interpoluje liniowo pomiędzy a i b.</span></code></pre>
-    <pre><code class="language-cs">QMath.Lerp(Vector2 a, Vector2 b, float t) <span class="green">// Interpoluje liniowo pomiędzy a i b.</span></code></pre>
+    <pre><code class="language-cs">QMath.Lerp(float a, float b, float t)
+<span class="green">// Linearly interpolates between a and b.</span>
 
-    <p>Interpolacja liniowa pomiędzy dwoma wartościami typu <b>float</b> lub <b>Vector2</b>.</p>
+QMath.Lerp(Vector2 a, Vector2 b, float t)
+<span class="green">// Linearly interpolates between a and b.</span></code></pre>
+
+    <p>Linear interpolation between two values of type <b>float</b> or <b>Vector2</b>.</p>
 
     <ul>
-      <li><b>a</b> – wartość początkowa</li>
-      <li><b>b</b> – wartość końcowa</li>
-      <li><b>t</b> – współczynnik interpolacji (0–1)</li>
+      <li><b>a</b> – start value</li>
+      <li><b>b</b> – end value</li>
+      <li><b>t</b> – interpolation factor (0–1)</li>
     </ul>
-    <p class="note info">Wartość <b>t</b> jest automatycznie ograniczana w zakresie 0–1.</p>
 
-    <h4>Użycie:</h4>
-    <pre><code class="language-cs">QMath.Lerp(0f, 10f, 0f)   <span class="green">// Wynik: 0</span>
-QMath.Lerp(0f, 10f, 0.5f) <span class="green">// Wynik: 5</span>
-QMath.Lerp(0f, 10f, 1f)   <span class="green">// Wynik: 10</span></code></pre>
+    <p class="note info"><b>t</b> is automatically clamped between 0 and 1.</p>
 
+    <h4>Usage:</h4>
+    <pre><code class="language-cs">QMath.Lerp(0f, 10f, 0f)   <span class="green">// Result: 0</span>
+QMath.Lerp(0f, 10f, 0.5f) <span class="green">// Result: 5</span>
+QMath.Lerp(0f, 10f, 1f)   <span class="green">// Result: 10</span></code></pre>
 
   </main>
 </div>

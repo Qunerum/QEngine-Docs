@@ -1,151 +1,151 @@
 <!DOCTYPE html>
 <head>
-  <meta charset="UTF-8">
-  <title>QEngine Docs - GUI</title>
-  <link rel="stylesheet" href="../../style.css">
+    <meta charset="UTF-8">
+    <title>QEngine Docs - GUI</title>
+    <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
 
 <!-- TOP BAR -->
 <header class="topbar">
-  <div class="logo">QEngine Documentation</div>
-  <a href="../../en/pages/gui.html" class="lang-btn" title="English version">🇬🇧</a>
+    <div class="logo">QEngine Documentation</div>
+    <a href="../../pl/pages/gui.html" class="lang-btn" title="Polish version">🇵🇱</a>
 </header>
 
 <!-- LAYOUT -->
 <div class="layout">
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <a href="../../index.html">Introduction</a>
-    <a href="../cli.html">CLI</a>
-    <h3>Namespaces</h3>
-    <a href="engine.html">QEngine</a>
-    <a class="this">QEngine.GUI</a>
-    <a href="math.html">QEngine.Mathematics</a>
-    <a href="input.html">QEngine.Input</a>
-  </aside>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <a href="../../index.html">Introduction</a>
+        <a href="../cli.html">CLI</a>
+        <h3>Namespaces</h3>
+        <a href="engine.html">QEngine</a>
+        <a class="this">QEngine.GUI</a>
+        <a href="math.html">QEngine.Mathematics</a>
+        <a href="input.html">QEngine.Input</a>
+    </aside>
 
-  <!-- CONTENT -->
-  <main class="content">
-    <h1>Typy i klasy</h1>
-    <p class="note info">Jeżeli element UI nie będzie przypisany do GameObject nie będzie on wyświetlany.</p>
-    <p class="note info">Elementy UI reagują na zdarzenia wejścia z systemu QEngine.Input.</p>
+    <!-- CONTENT -->
+    <main class="content">
+        <h1>Types and Classes</h1>
+        <p class="note info">If a UI element is not assigned to a GameObject, it will not be displayed.</p>
+        <p class="note info">UI elements respond to input events from the QEngine.Input system.</p>
 
-    <!-- COLOR -->
-    <h2>Color</h2>
-    <h3>Publiczne pola:</h3>
-    <pre><code class="language-cs">Color.r <span class="green">// byte</span>
+        <!-- COLOR -->
+        <h2>Color</h2>
+        <h3>Public Fields:</h3>
+        <pre><code class="language-cs">Color.r <span class="green">// byte</span>
 Color.g <span class="green">// byte</span>
 Color.b <span class="green">// byte</span>
 Color.a <span class="green">// byte</span></code></pre>
-    <h3>Konstruktory:</h3>
-    <pre><code class="language-cs">new Color() <span class="green">// Tworzy nowy kolor (biały).</span>
-new Color(byte rgb) <span class="green">// Tworzy nowy kolor, ustawia 'r' , 'g' i 'b' na 'rgb' (a = 255).</span>
-new Color(byte rgb, byte a) <span class="green">// Tworzy nowy kolor, ustawia 'r' , 'g' i 'b' na 'rgb'.</span>
-new Color(byte r, byte g, byte b) <span class="green">// Tworzy nowy kolor o podanych wartościach (a = 255).</span>
-new Color(byte r, byte g, byte b, byte a) <span class="green">// Tworzy nowy kolor o podanych wartościach.</span></code></pre>
-    <h3>Użycie:</h3>
-    <pre><code class="language-cs">Color color = new Color(100); 
-<span class="green">// Tworzy nowy kolor (100, 100, 100, 255) (szary)</span></code></pre>
+        <h3>Constructors:</h3>
+        <pre><code class="language-cs">new Color() <span class="green">// Creates a new color (white).</span>
+new Color(byte rgb) <span class="green">// Creates a new color, sets 'r', 'g', and 'b' to 'rgb' (a = 255).</span>
+new Color(byte rgb, byte a) <span class="green">// Creates a new color, sets 'r', 'g', and 'b' to 'rgb'.</span>
+new Color(byte r, byte g, byte b) <span class="green">// Creates a new color with specified values (a = 255).</span>
+new Color(byte r, byte g, byte b, byte a) <span class="green">// Creates a new color with specified values.</span></code></pre>
+        <h3>Usage:</h3>
+        <pre><code class="language-cs">Color color = new Color(100); 
+<span class="green">// Creates a new color (100, 100, 100, 255) (gray)</span></code></pre>
 
-    <!-- SPRITE -->
-    <h2>Sprite</h2>
-    <h3>Użycie:</h3>
-    <pre><code class="language-cs">Sprite sprite = Assets.LoadSprite("Path/file.png");
-<span class="green">// Wczytuje plik graficzny z Assets/</span></code></pre>
+        <!-- SPRITE -->
+        <h2>Sprite</h2>
+        <h3>Usage:</h3>
+        <pre><code class="language-cs">Sprite sprite = Assets.LoadSprite("Path/file.png");
+<span class="green">// Loads a graphic file from Assets/</span></code></pre>
 
-    <!-- IMAGE -->
-    <h2>Image</h2>
-    <h3>Publiczne pola:</h3>
-    <pre><code class="language-cs">Image.size <span class="green">// Vector2</span>
+        <!-- IMAGE -->
+        <h2>Image</h2>
+        <h3>Public Fields:</h3>
+        <pre><code class="language-cs">Image.size <span class="green">// Vector2</span>
 Image.sprite <span class="green">// Sprite</span>
 Image.color <span class="green">// Color</span></code></pre>
-    <p class="note info">Jeżeli sprite nie jest ustawiony, na scenie będzie wyświetlany prostokąt o danych wymiarach.</p>
-    <h3>Użycie:</h3>
-    <pre><code class="language-cs">Image img = new Image();
-<span class="green">// Tworzy nowy Image nieprzypisany do obiektu.</span></code></pre>
-    <p>Jak przypisać do obiektu?</p>
-    <pre><code class="language-cs">GameObject obj = new GameObject();
+        <p class="note info">If the sprite is not set, a rectangle of the given size will be displayed on the scene.</p>
+        <h3>Usage:</h3>
+        <pre><code class="language-cs">Image img = new Image();
+<span class="green">// Creates a new Image not assigned to any object.</span></code></pre>
+        <p>How to assign to a GameObject?</p>
+        <pre><code class="language-cs">GameObject obj = new GameObject();
 Image img = obj.AddComponent&lt;Image&gt;();</code></pre>
 
-    <!-- SHAPE 2D -->
-    <h2>Shape2D</h2>
-    <p>Shape2D reprezentuje dowolną figurę geometryczną.</p>
-    <h3>Publiczne pola:</h3>
-    <pre><code class="language-cs">Shape2D.color <span class="green">// Color</span></code></pre>
-    <h3>Publiczne funkcje:</h3>
-    <pre><code class="language-cs">Shape2D.Clear() <span class="green">// Usuwa wszystkie wierzchołki.</span>
-Shape2D.GetVertices() <span class="green">// Pobiera wszystkie wierzchołki w formie List&lt;Vector2&gt;.</span>
-Shape2D.AddVertex(Vector2 vertex) <span class="green">// Dodaje wierzchołek o danej pozycji (lokalnej).</span>
-Shape2D.RemoveVertex(int index) <span class="green">// Usuwa wierzchołek o danym ID.</span></code></pre>
-    <h3>Użycie:</h3>
-    <pre><code class="language-cs">Shape2D shape = new Shape2D();
-<span class="green">// Tworzy nowy Shape2D nieprzypisany do obiektu.</span></code></pre>
-    <p>Jak przypisać do obiektu?</p>
-    <pre><code class="language-cs">GameObject obj = new GameObject();
+        <!-- SHAPE 2D -->
+        <h2>Shape2D</h2>
+        <p>Shape2D represents any geometric figure.</p>
+        <h3>Public Fields:</h3>
+        <pre><code class="language-cs">Shape2D.color <span class="green">// Color</span></code></pre>
+        <h3>Public Functions:</h3>
+        <pre><code class="language-cs">Shape2D.Clear() <span class="green">// Removes all vertices.</span>
+Shape2D.GetVertices() <span class="green">// Gets all vertices as a List&lt;Vector2&gt;.</span>
+Shape2D.AddVertex(Vector2 vertex) <span class="green">// Adds a vertex at the given position (local).</span>
+Shape2D.RemoveVertex(int index) <span class="green">// Removes the vertex with the given ID.</span></code></pre>
+        <h3>Usage:</h3>
+        <pre><code class="language-cs">Shape2D shape = new Shape2D();
+<span class="green">// Creates a new Shape2D not assigned to any object.</span></code></pre>
+        <p>How to assign to a GameObject?</p>
+        <pre><code class="language-cs">GameObject obj = new GameObject();
 Shape2D shape = obj.AddComponent&lt;Shape2D&gt;();</code></pre>
 
-    <!-- TEXT -->
-    <h2>Text</h2>
-    <h3>Publiczne pola:</h3>
-    <pre><code class="language-cs">Text.text <span class="green">// string</span>
+        <!-- TEXT -->
+        <h2>Text</h2>
+        <h3>Public Fields:</h3>
+        <pre><code class="language-cs">Text.text <span class="green">// string</span>
 Text.fontSize <span class="green">// int</span>
 Text.color <span class="green">// Color</span></code></pre>
-    <h3>Użycie:</h3>
-    <pre><code class="language-cs">Text text = new Text();
-<span class="green">// Tworzy nowy Text nieprzypisany do obiektu.</span></code></pre>
-    <p>Jak przypisać do obiektu?</p>
-    <pre><code class="language-cs">GameObject obj = new GameObject();
+        <h3>Usage:</h3>
+        <pre><code class="language-cs">Text text = new Text();
+<span class="green">// Creates a new Text not assigned to any object.</span></code></pre>
+        <p>How to assign to a GameObject?</p>
+        <pre><code class="language-cs">GameObject obj = new GameObject();
 Text txt = obj.AddComponent&lt;Text&gt;();</code></pre>
 
-    <!-- BUTTON -->
-    <h2>Button</h2>
-    <h3>Publiczne pola:</h3>
-    <pre><code class="language-cs">Button.size <span class="green">// Vector2</span>
+        <!-- BUTTON -->
+        <h2>Button</h2>
+        <h3>Public Fields:</h3>
+        <pre><code class="language-cs">Button.size <span class="green">// Vector2</span>
 Button.color <span class="green">// Color</span>
 Button.onClick <span class="green">// Action</span>
 Button.onPointerEnter <span class="green">// Action</span>
 Button.onPointerExit <span class="green">// Action</span></code></pre>
-    <h3>Użycie:</h3>
-    <pre><code class="language-cs">Button btn = new Button();
-<span class="green">// Tworzy nowy Button nieprzypisany do obiektu.</span></code></pre>
-    <p>Jak przypisać do obiektu?</p>
-    <pre><code class="language-cs">GameObject obj = new GameObject();
+        <h3>Usage:</h3>
+        <pre><code class="language-cs">Button btn = new Button();
+<span class="green">// Creates a new Button not assigned to any object.</span></code></pre>
+        <p>How to assign to a GameObject?</p>
+        <pre><code class="language-cs">GameObject obj = new GameObject();
 Button btn = obj.AddComponent&lt;Button&gt;();</code></pre>
 
-    <p>Aby dodać akcję do przycisku należy użyć:</p>
-    <pre><code class="language-cs">btn.onClick += () => {
-<span class="green">// Akcja</span>
+        <p>To add an action to the button, use:</p>
+        <pre><code class="language-cs">btn.onClick += () => {
+<span class="green">// Action</span>
 }</code></pre>
 
-    <!-- SLIDER -->
-    <h2>Slider</h2>
-    <h3>Publiczne pola:</h3>
-    <pre><code class="language-cs">Slider.size <span class="green">// Vector2</span>
+        <!-- SLIDER -->
+        <h2>Slider</h2>
+        <h3>Public Fields:</h3>
+        <pre><code class="language-cs">Slider.size <span class="green">// Vector2</span>
 Slider.backgroundColor <span class="green">// Color</span>
 Slider.fillColor <span class="green">// Color</span>
 Slider.handleColor <span class="green">// Color</span>
 Slider.valueDecimals <span class="green">// int</span>
 Slider.onValueChanged <span class="green">// Action</span></code></pre>
-    <h3>Publiczne funkcje:</h3>
-    <pre><code class="language-cs">Slider.GetMin() <span class="green">// Zwraca minimalną wartość suwaka (float).</span>
-Slider.GetMax() <span class="green">// Zwraca maksymalną wartość suwaka (float).</span>
-Slider.GetValue() <span class="green">// Zwraca wartość suwaka (float).</span>
-Slider.SetMin(float min) <span class="green">// Ustawia minimalną wartość suwaka (float).</span>
-Slider.SetMax(float max) <span class="green">// Ustawia maksymalną wartość suwaka (float).</span>
-Slider.SetValue(float value) <span class="green">// Ustawia wartość suwaka (float).</span></code></pre>
-    <h3>Użycie:</h3>
-    <pre><code class="language-cs">Slider sld = new Slider();
-<span class="green">// Tworzy nowy Slider nieprzypisany do obiektu.</span></code></pre>
-    <p>Jak przypisać do obiektu?</p>
-    <pre><code class="language-cs">GameObject obj = new GameObject();
+        <h3>Public Functions:</h3>
+        <pre><code class="language-cs">Slider.GetMin() <span class="green">// Returns the slider's minimum value (float).</span>
+Slider.GetMax() <span class="green">// Returns the slider's maximum value (float).</span>
+Slider.GetValue() <span class="green">// Returns the slider's current value (float).</span>
+Slider.SetMin(float min) <span class="green">// Sets the slider's minimum value (float).</span>
+Slider.SetMax(float max) <span class="green">// Sets the slider's maximum value (float).</span>
+Slider.SetValue(float value) <span class="green">// Sets the slider's value (float).</span></code></pre>
+        <h3>Usage:</h3>
+        <pre><code class="language-cs">Slider sld = new Slider();
+<span class="green">// Creates a new Slider not assigned to any object.</span></code></pre>
+        <p>How to assign to a GameObject?</p>
+        <pre><code class="language-cs">GameObject obj = new GameObject();
 Slider sld = obj.AddComponent&lt;Slider&gt;();</code></pre>
 
-    <!-- DROPDOWN -->
-    <h2>Dropdown</h2>
-    <h3>Publiczne pola:</h3>
-    <pre><code class="language-cs">Dropdown.size <span class="green">// Vector2</span>
+        <!-- DROPDOWN -->
+        <h2>Dropdown</h2>
+        <h3>Public Fields:</h3>
+        <pre><code class="language-cs">Dropdown.size <span class="green">// Vector2</span>
 Dropdown.color <span class="green">// Color</span>
         
 Dropdown.labelFontSize <span class="green">// int</span>
@@ -159,21 +159,21 @@ Dropdown.optionFontColor <span class="green">// Color</span>
 Dropdown.optionsDistance <span class="green">// float</span>
 Dropdown.options <span class="green">// List&lt;string&gt;</span>
 Dropdown.isOpened <span class="green">// bool</span></code></pre>
-    <h3>Publiczne funkcje:</h3>
-    <pre><code class="language-cs">Dropdown.Clear() <span class="green">// Usuwa wszystkie opcje.</span>
-Dropdown.AddOption(string option) <span class="green">// Dodaje opcję.</span>
-Dropdown.RemoveOption(int index) <span class="green">// Usuwa opcję o danym indeksie.</span></code></pre>
-    <h3>Użycie:</h3>
-    <pre><code class="language-cs">Dropdown drop = new Dropdown();
-<span class="green">// Tworzy nowy Dropdown nieprzypisany do obiektu.</span></code></pre>
-    <p>Jak przypisać do obiektu?</p>
-    <pre><code class="language-cs">GameObject obj = new GameObject();
+        <h3>Public Functions:</h3>
+        <pre><code class="language-cs">Dropdown.Clear() <span class="green">// Removes all options.</span>
+Dropdown.AddOption(string option) <span class="green">// Adds an option.</span>
+Dropdown.RemoveOption(int index) <span class="green">// Removes the option at the given index.</span></code></pre>
+        <h3>Usage:</h3>
+        <pre><code class="language-cs">Dropdown drop = new Dropdown();
+<span class="green">// Creates a new Dropdown not assigned to any object.</span></code></pre>
+        <p>How to assign to a GameObject?</p>
+        <pre><code class="language-cs">GameObject obj = new GameObject();
 Dropdown drop = obj.AddComponent&lt;Dropdown&gt;();</code></pre>
 
-    <!-- INPUT FIELD -->
-    <h2>InputField</h2>
-    <h3>Publiczne pola:</h3>
-    <pre><code class="language-cs">InputField.size <span class="green">// Vector2</span>
+        <!-- INPUT FIELD -->
+        <h2>InputField</h2>
+        <h3>Public Fields:</h3>
+        <pre><code class="language-cs">InputField.size <span class="green">// Vector2</span>
 InputField.color <span class="green">// Color</span>
         
 InputField.text <span class="green">// string</span>
@@ -183,13 +183,13 @@ InputField.textColor <span class="green">// Color</span>
 InputField.labelText <span class="green">// string</span>
 InputField.labelTextFontSize <span class="green">// int</span>
 InputField.labelTextColor <span class="green">// Color</span></code></pre>
-    <h3>Użycie:</h3>
-    <pre><code class="language-cs">InputField inFld = new InputField();
-<span class="green">// Tworzy nowy InputField nieprzypisany do obiektu.</span></code></pre>
-    <p>Jak przypisać do obiektu?</p>
-    <pre><code class="language-cs">GameObject obj = new GameObject();
+        <h3>Usage:</h3>
+        <pre><code class="language-cs">InputField inFld = new InputField();
+<span class="green">// Creates a new InputField not assigned to any object.</span></code></pre>
+        <p>How to assign to a GameObject?</p>
+        <pre><code class="language-cs">GameObject obj = new GameObject();
 InputField inFld = obj.AddComponent&lt;InputField&gt;();</code></pre>
 
-  </main>
+    </main>
 </div>
 </body>
