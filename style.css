@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    background: #0e0e11;
+    color: #d4d4d4;
+}
+
+/* TOP BAR */
+.topbar {
+    height: 56px;
+    background: #000;
+    border-bottom: 1px solid #1f1f1f;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* LAYOUT */
+.layout {
+    display: flex;
+    height: calc(100vh - 56px);
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    background: #111;
+    border-right: 1px solid #1f1f1f;
+    padding: 16px;
+}
+
+.sidebar h3 {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.sidebar a {
+    display: block;
+    padding: 8px 12px;
+    margin-bottom: 4px;
+    color: #ccc;
+    text-decoration: none;
+    border-radius: 6px;
+}
+.sidebar a:hover {
+    background: #1b1b1b;
+    color: #fff;
+}
+
+.sidebar a.this {
+    background: #222222;
+    display: block;
+    padding: 8px 12px;
+    margin-bottom: 4px;
+    color: #ccc;
+    text-decoration: none;
+    border-radius: 6px;
+}
+.sidebar a.this:hover {
+    background: #2b2b2b;
+    color: #fff;
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+    padding: 32px;
+    overflow-y: auto;
+}
+
+.content h1 {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.content h2 {
+    margin-top: 32px;
+    margin-bottom: 12px;
+}
+
+.content h3 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    color: #aaa;
+    font-size: 16px;
+}
+
+.content p {
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.note {
+    background: #1f1f1f;
+    padding: 12px 16px;
+    margin: 16px 0;
+    border-radius: 6px;
+    color: #dcdcdc;
+    font-size: 14px;
+    border-left: 4px solid;
+}
+.note.info  { border-left-color: #4fc1ff; }
+.note.warn  { border-left-color: #f0c674; }
+.note.error { border-left-color: #f44747; }
+
+/* CODE */
+pre {
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 16px;
+    overflow-x: auto;
+    margin: 16px 0;
+}
+
+code {
+    color: #dcdcdc;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+}
+
+/* SIMPLE SYNTAX HIGHLIGHT */
+.language-cs .red { color: #bb0000; }
+.language-cs .green { color: #00bb00; }
+.language-cs .blue { color: #0000bb; }
+.language-cs .cyan { color: #00bbbb; }
+.language-cs .yellow { color: #baa000; }
