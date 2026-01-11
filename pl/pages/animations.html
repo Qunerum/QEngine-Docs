@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>QEngine Docs - Animations</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+    <div class="logo">QEngine Documentation</div>
+    <a href="../../en/pages/savefile.html" class="lang-btn" title="English version">🇬🇧</a>
+</header>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <a href="../index.html">Wstęp</a>
+        <a href="../cli.html">CLI</a>
+        <h3>Przestrzenie nazw</h3>
+        <a href="engine.html">QEngine</a>
+        <a href="gui.html">QEngine.GUI</a>
+        <a href="math.html">QEngine.Mathematics</a>
+        <a href="input.html">QEngine.Input</a>
+        <a href="savefile.html">QEngine.FileSave</a>
+        <a class="this">QEngine.Animations</a>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+        <h1>Typy i klasy</h1>
+        <p class="note info">Jeżeli Animator nie będzie przypisany do GameObject nie będzie on działał.</p>
+
+        <!-- ANIMATION -->
+        <h2>Animation</h2>
+        <h3>Publiczne funkcje:</h3>
+        <pre><code class="language-cs">Animation.AddFrame(Sprite frame) <span class="green">// Dodaje klatkę do animacji.</span>
+Animation.AddFrames(List&lt;Sprite&gt; frames) <span class="green">// Dodaje klatki do animacji.</span>
+Animation.RemoveFrame(int index) <span class="green">// Usuwa klatkę o danym indeksie.</span>
+            
+Animation.GetFrame(int index) <span class="green">// Zwraca klatkę o danym indeksie.</span>
+Animation.GetFrames() <span class="green">// Zwraca wszystkie klatki animacji w formie List&lt;Sprite&gt;.</span>
+Animation.GetFramesCount() <span class="green">// Zwraca liczbę wszystkich klatek animacji.</span>
+            
+Animation.GetFPS() <span class="green">// Zwraca liczbę odtwarzanych klatek (animacji) na sekundę.</span>
+Animation.SetFPS(int fps) <span class="green">// Ustawia liczbę odtwarzanych klatek (animacji) na sekundę.</span>
+            
+Animation.Clear() <span class="green">// Usuwa wszystkie klatki w animacji.</span></code></pre>
+        <h3>Użycie:</h3>
+        <pre><code class="language-cs">Animator anim = new Animator();
+<span class="green">// Tworzy nowy Animator nieprzypisany do obiektu.</span></code></pre>
+        <p>Jak przypisać do obiektu?</p>
+        <pre><code class="language-cs">GameObject obj = new GameObject();
+Animator anim = obj.AddComponent&lt;Animator&gt;();</code></pre>
+        
+        <!-- ANIMATOR -->
+        <h2>Animator</h2>
+        <h3>Publiczne pola:</h3>
+        <pre><code class="language-cs">Animator.isPlaying <span class="green">// bool</span>
+Animator.isPaused <span class="green">// bool</span></code></pre>
+        <h3>Publiczne funkcje:</h3>
+        <pre><code class="language-cs">Animator.GetAnimation(string name) <span class="green">// Zwraca animację o danej nazwie.</span>
+Animator.AddAnimation(string name) <span class="green">// Dodaje pustą animację.</span>
+Animator.RemoveAnimation(string name) <span class="green">// Usuwa animację o danej nazwie.</span>
+            
+Animator.AddFrame(string name, Sprite frame) <span class="green">// Dodaje klatkę do danej animacji.</span>
+Animator.AddFrames(string name, List&lt;Sprite&gt; frames) <span class="green">// Dodaje klatki do danej animacji.</span>
+            
+Animator.Play(string name) <span class="green">// Zaczyna odtwarzać wybraną animację.</span>
+Animator.Pause() <span class="green">// Pauzuje odtwarzanie animacji.</span>
+Animator.UnPause() <span class="green">// Odpauzowuje odtwarzanie animacji.</span>
+Animator.Reset() <span class="green">// Cofa animację do pierwszej klatki.</span></code></pre>
+        <h3>Użycie:</h3>
+        <pre><code class="language-cs">Animator anim = new Animator();
+<span class="green">// Tworzy nowy Animator nieprzypisany do obiektu.</span></code></pre>
+        <p>Jak przypisać do obiektu?</p>
+        <pre><code class="language-cs">GameObject obj = new GameObject();
+Animator anim = obj.AddComponent&lt;Animator&gt;();</code></pre>
+        
+    </main>
+</div>
+</body>

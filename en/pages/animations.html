@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>QEngine Docs - Animations</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="logo">QEngine Documentation</div>
+  <a href="../../en/pages/savefile.html" class="lang-btn" title="English version">🇬🇧</a>
+</header>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a href="../index.html">Introduction</a>
+    <a href="../cli.html">CLI</a>
+    <h3>Namespaces</h3>
+    <a href="engine.html">QEngine</a>
+    <a href="gui.html">QEngine.GUI</a>
+    <a href="math.html">QEngine.Mathematics</a>
+    <a href="input.html">QEngine.Input</a>
+    <a href="savefile.html">QEngine.FileSave</a>
+    <a class="this">QEngine.Animations</a>
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="content">
+    <h1>Types and Classes</h1>
+    <p class="note info">If the Animator is not assigned to a GameObject, it will not work.</p>
+
+    <!-- ANIMATION -->
+    <h2>Animation</h2>
+    <h3>Public Functions:</h3>
+    <pre><code class="language-cs">Animation.AddFrame(Sprite frame) <span class="green">// Adds a frame to the animation.</span>
+Animation.AddFrames(List&lt;Sprite&gt; frames) <span class="green">// Adds frames to the animation.</span>
+Animation.RemoveFrame(int index) <span class="green">// Removes the frame at the given index.</span>
+            
+Animation.GetFrame(int index) <span class="green">// Returns the frame at the given index.</span>
+Animation.GetFrames() <span class="green">// Returns all animation frames as a List&lt;Sprite&gt;.</span>
+Animation.GetFramesCount() <span class="green">// Returns the total number of animation frames.</span>
+            
+Animation.GetFPS() <span class="green">// Returns the number of frames (animation) played per second.</span>
+Animation.SetFPS(int fps) <span class="green">// Sets the number of frames (animation) played per second.</span>
+            
+Animation.Clear() <span class="green">// Removes all frames from the animation.</span></code></pre>
+    <h3>Usage:</h3>
+    <pre><code class="language-cs">Animator anim = new Animator();
+<span class="green">// Creates a new Animator not assigned to any object.</span></code></pre>
+    <p>How to assign to a GameObject?</p>
+    <pre><code class="language-cs">GameObject obj = new GameObject();
+Animator anim = obj.AddComponent&lt;Animator&gt;();</code></pre>
+
+    <!-- ANIMATOR -->
+    <h2>Animator</h2>
+    <h3>Public Fields:</h3>
+    <pre><code class="language-cs">Animator.isPlaying <span class="green">// bool</span>
+Animator.isPaused <span class="green">// bool</span></code></pre>
+    <h3>Public Functions:</h3>
+    <pre><code class="language-cs">Animator.GetAnimation(string name) <span class="green">// Returns the animation with the given name.</span>
+Animator.AddAnimation(string name) <span class="green">// Adds an empty animation.</span>
+Animator.RemoveAnimation(string name) <span class="green">// Removes the animation with the given name.</span>
+            
+Animator.AddFrame(string name, Sprite frame) <span class="green">// Adds a frame to the specified animation.</span>
+Animator.AddFrames(string name, List&lt;Sprite&gt; frames) <span class="green">// Adds frames to the specified animation.</span>
+            
+Animator.Play(string name) <span class="green">// Starts playing the selected animation.</span>
+Animator.Pause() <span class="green">// Pauses animation playback.</span>
+Animator.UnPause() <span class="green">// Resumes animation playback.</span>
+Animator.Reset() <span class="green">// Resets the animation to the first frame.</span></code></pre>
+    <h3>Usage:</h3>
+    <pre><code class="language-cs">Animator anim = new Animator();
+<span class="green">// Creates a new Animator not assigned to any object.</span></code></pre>
+    <p>How to assign to a GameObject?</p>
+    <pre><code class="language-cs">GameObject obj = new GameObject();
+Animator anim = obj.AddComponent&lt;Animator&gt;();</code></pre>
+
+  </main>
+</div>
+</body>

@@ -25,6 +25,7 @@
     <a href="math.html">QEngine.Mathematics</a>
     <a class="this">QEngine.Input</a>
     <a href="savefile.html">QEngine.FileSave</a>
+    <a href="animations.html">QEngine.Animations</a>
   </aside>
 
   <!-- CONTENT -->
@@ -42,7 +43,15 @@ Input.mouseLeft <span class="green">// bool</span>
 <span class="green">// Stan naciśnięcia LPM.</span></code></pre>
     <h3>Publiczne funkcje:</h3>
     <pre><code class="language-cs">Input.Read(Key key) <span class="green">// Odczytuje stan przycisku klawiatury.</span>
-Input.ReadDown(Key key) <span class="green">// Odczytuje stan naciśnięcia przycisku klawiatury.</span></code></pre>
+Input.ReadDown(Key key) <span class="green">// Odczytuje stan naciśnięcia przycisku klawiatury.</span>
+      
+Input.AddAxisInt(string name, Key left, Key right) <span class="green">// Dodaje nową oś int.</span>
+Input.AddAxisInt(string name, List&lt;Key&gt; left, List&lt;Key&gt; right) <span class="green">// Dodaje nową oś int.</span>
+Input.GetAxisInt(string name) <span class="green">// Zwraca wartość odczytaną z osi int.</span>
+      
+Input.AddAxisVector2(string name, Key up, Key bottom, Key left, Key right) <span class="green">// Dodaje nową oś Vector2.</span>
+Input.AddAxisVector2(string name, List&lt;Key&gt; up, List&lt;Key&gt; bottom, List&lt;Key&gt; left, List&lt;Key&gt; right) <span class="green">// Dodaje nową oś Vector2.</span>
+Input.GetAxisVector2(string name) <span class="green">// Zwraca wartość odczytaną z osi Vector2.</span></code></pre>
       <p class="note info">ReadDown zwraca <b>true</b> tylko w klatce, w której klawisz został naciśnięty.</p>
   </main>
 </div>

@@ -24,7 +24,8 @@
     <a href="gui.html">QEngine.GUI</a>
     <a href="math.html">QEngine.Mathematics</a>
     <a href="input.html">QEngine.Input</a>
-      <a href="savefile.html">QEngine.FileSave</a>
+    <a href="savefile.html">QEngine.FileSave</a>
+    <a href="animations.html">QEngine.Animations</a>
   </aside>
 
   <!-- CONTENT -->
@@ -40,7 +41,10 @@
 <span class="green">// Składowa X wektora</span>
         
 Vector2.y <span class="green">// float</span>
-<span class="green">// Składowa Y wektora</span></code></pre>
+<span class="green">// Składowa Y wektora</span>
+        
+Vector2.isZero <span class="green">// bool</span>
+<span class="green">// Czy wektor jest równy (0f, 0f)</span></code></pre>
     <h3>Konstruktor:</h3>
     <pre><code class="language-cs">new Vector2(float x, float y) <span class="green">// Tworzy nowy wektor o podanych współrzędnych.</span></code></pre>
     <h3>Operatory matematyczne:</h3>
@@ -59,11 +63,14 @@ new Vector2(12f, -8f) / 4f <span class="green">// Wynik: new Vector2(3f, -2f)</s
     <p>Vector2Int reprezentuje dwuwymiarowy wektor lub punkt w przestrzeni 2D.</p>
     <p>Najczęściej używany do pozycji, rozmiarów, kierunków oraz obliczeń matematycznych.</p>
     <h3>Publiczne pola:</h3>
-    <pre><code class="language-cs">Vector2Int.x <span class="green">// int</span>
+      <pre><code class="language-cs">Vector2Int.x <span class="green">// int</span>
 <span class="green">// Składowa X wektora</span>
         
 Vector2Int.y <span class="green">// int</span>
-<span class="green">// Składowa Y wektora</span></code></pre>
+<span class="green">// Składowa Y wektora</span>
+        
+Vector2Int.isZero <span class="green">// bool</span>
+<span class="green">// Czy wektor jest równy (0, 0)</span></code></pre>
     <h3>Konstruktor:</h3>
     <pre><code class="language-cs">new Vector2Int(int x, int y) <span class="green">// Tworzy nowy wektor o podanych współrzędnych.</span></code></pre>
     <h3>Operatory matematyczne:</h3>

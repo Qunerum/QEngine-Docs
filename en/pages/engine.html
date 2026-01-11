@@ -22,6 +22,7 @@
         <a href="math.html">QEngine.Mathematics</a>
         <a href="input.html">QEngine.Input</a>
         <a href="savefile.html">QEngine.FileSave</a>
+        <a href="animations.html">QEngine.Animations</a>
     </aside>
 
     <main class="content">
@@ -30,13 +31,17 @@
         <h2>Vector2</h2>
         <p>Vector2 represents a two-dimensional vector or point in 2D space.</p>
         <p>Most commonly used for positions, sizes, directions, and mathematical calculations.</p>
-
-        <h3>Public fields:</h3>
+        
+        <h3>Public Fields:</h3>
         <pre><code class="language-cs">Vector2.x <span class="green">// float</span>
 <span class="green">// X component of the vector</span>
-
+        
 Vector2.y <span class="green">// float</span>
-<span class="green">// Y component of the vector</span></code></pre>
+<span class="green">// Y component of the vector</span>
+        
+Vector2.isZero <span class="green">// bool</span>
+<span class="green">// Indicates whether the vector is equal to (0, 0)</span></code></pre>
+
 
         <h3>Constructor:</h3>
         <pre><code class="language-cs">new Vector2(float x, float y) <span class="green">// Creates a new vector with the given coordinates.</span></code></pre>
@@ -56,13 +61,17 @@ new Vector2(12f, -8f) / 4f <span class="green">// Result: new Vector2(3f, -2f)</
         <h2>Vector2Int</h2>
         <p>Vector2Int represents a two-dimensional vector or point in 2D space.</p>
         <p>Most commonly used for positions, sizes, directions, and mathematical calculations.</p>
-
-        <h3>Public fields:</h3>
+        
+        <h3>Public Fields:</h3>
         <pre><code class="language-cs">Vector2Int.x <span class="green">// int</span>
 <span class="green">// X component of the vector</span>
-
+        
 Vector2Int.y <span class="green">// int</span>
-<span class="green">// Y component of the vector</span></code></pre>
+<span class="green">// Y component of the vector</span>
+        
+Vector2Int.isZero <span class="green">// bool</span>
+<span class="green">// Indicates whether the vector is equal to (0, 0)</span></code></pre>
+
 
         <h3>Constructor:</h3>
         <pre><code class="language-cs">new Vector2Int(int x, int y) <span class="green">// Creates a new vector with the given coordinates.</span></code></pre>

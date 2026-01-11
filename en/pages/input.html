@@ -6,15 +6,18 @@
 </head>
 <body>
 
+<!-- TOP BAR -->
 <header class="topbar">
   <div class="logo">QEngine Documentation</div>
-  <a href="../../pl/pages/input.html" class="lang-btn" title="Polish version">🇵🇱</a>
+  <a href="../../en/pages/input.html" class="lang-btn" title="English version">🇬🇧</a>
 </header>
 
+<!-- LAYOUT -->
 <div class="layout">
 
+  <!-- SIDEBAR -->
   <aside class="sidebar">
-    <a href="../../index.html">Introduction</a>
+    <a href="../index.html">Introduction</a>
     <a href="../cli.html">CLI</a>
     <h3>Namespaces</h3>
     <a href="engine.html">QEngine</a>
@@ -22,27 +25,34 @@
     <a href="math.html">QEngine.Mathematics</a>
     <a class="this">QEngine.Input</a>
     <a href="savefile.html">QEngine.FileSave</a>
+    <a href="animations.html">QEngine.Animations</a>
   </aside>
 
+  <!-- CONTENT -->
   <main class="content">
-    <h1>Types and classes</h1>
+    <h1>Types and Classes</h1>
 
+    <!-- INPUT -->
     <h2>Input</h2>
-    <p>Input provides access to keyboard input and mouse position.</p>
-
-    <h3>Public fields:</h3>
+    <p>Input represents reading keyboard button states and mouse position.</p>
+    <h3>Public Fields:</h3>
     <pre><code class="language-cs">Input.mousePosition <span class="green">// Vector2Int</span>
-<span class="green">// Cursor position in the game window.</span>
-
+<span class="green">// Cursor position in the game window.</span>        
+        
 Input.mouseLeft <span class="green">// bool</span>
 <span class="green">// Left mouse button state.</span></code></pre>
-
-    <h3>Public methods:</h3>
-    <pre><code class="language-cs">Input.Read(Key key) <span class="green">// Reads keyboard key state.</span>
-Input.ReadDown(Key key) <span class="green">// Reads key press state.</span></code></pre>
-
-    <p class="note info">ReadDown returns <b>true</b> only on the frame the key was pressed.</p>
-
+    <h3>Public Functions:</h3>
+    <pre><code class="language-cs">Input.Read(Key key) <span class="green">// Reads the state of a keyboard key.</span>
+Input.ReadDown(Key key) <span class="green">// Reads the key-down state.</span>
+      
+Input.AddAxisInt(string name, Key left, Key right) <span class="green">// Adds a new int axis.</span>
+Input.AddAxisInt(string name, List&lt;Key&gt; left, List&lt;Key&gt; right) <span class="green">// Adds a new int axis.</span>
+Input.GetAxisInt(string name) <span class="green">// Returns the value read from the int axis.</span>
+      
+Input.AddAxisVector2(string name, Key up, Key bottom, Key left, Key right) <span class="green">// Adds a new Vector2 axis.</span>
+Input.AddAxisVector2(string name, List&lt;Key&gt; up, List&lt;Key&gt; bottom, List&lt;Key&gt; left, List&lt;Key&gt; right) <span class="green">// Adds a new Vector2 axis.</span>
+Input.GetAxisVector2(string name) <span class="green">// Returns the value read from the Vector2 axis.</span></code></pre>
+    <p class="note info"><b>ReadDown</b> returns <b>true</b> only in the frame in which the key was pressed.</p>
   </main>
 </div>
 </body>
