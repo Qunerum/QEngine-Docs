@@ -87,6 +87,23 @@ Shape2D.RemoveVertex(int index) <span class="green">// Usuwa wierzchołek o dany
       <p>Jak przypisać do obiektu?</p>
       <pre><code class="language-cs">GameObject obj = new GameObject();
 Shape2D shape = obj.AddComponent&lt;Shape2D&gt;();</code></pre>
+      
+      <!-- LINE DRAWER -->
+    <h2>LineDrawer</h2>
+    <h3>Publiczne pola:</h3>
+    <pre><code class="language-cs">LineDrawer.lineThickness <span class="green">// float</span>
+LineDrawer.color <span class="green">// Color</span></code></pre>
+    <h3>Publiczne funkcje:</h3>
+    <pre><code class="language-cs">LineDrawer.Clear() <span class="green">// Usuwa wszystkie punkty.</span>
+LineDrawer.GetPoints() <span class="green">// Pobiera wszystkie punkty w formie List&lt;Vector2&gt;.</span>
+LineDrawer.AddPoint(Vector2 vertex) <span class="green">// Dodaje punkt o danej pozycji (lokalnej).</span>
+LineDrawer.RemovePoint(int index) <span class="green">// Usuwa punkt o danym ID.</span></code></pre>
+    <h3>Użycie:</h3>
+    <pre><code class="language-cs">LineDrawer shape = new LineDrawer();
+<span class="green">// Tworzy nowy LineDrawer nieprzypisany do obiektu.</span></code></pre>
+      <p>Jak przypisać do obiektu?</p>
+      <pre><code class="language-cs">GameObject obj = new GameObject();
+LineDrawer lineDrawer = obj.AddComponent&lt;LineDrawer&gt;();</code></pre>
             
       <!-- TEXT -->
     <h2>Text</h2>

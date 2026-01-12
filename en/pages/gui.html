@@ -88,6 +88,23 @@ Shape2D.RemoveVertex(int index) <span class="green">// Removes the vertex with t
         <pre><code class="language-cs">GameObject obj = new GameObject();
 Shape2D shape = obj.AddComponent&lt;Shape2D&gt;();</code></pre>
 
+        <!-- LINE DRAWER -->
+        <h2>LineDrawer</h2>
+        <h3>Public Fields:</h3>
+        <pre><code class="language-cs">LineDrawer.lineThickness <span class="green">// float</span>
+LineDrawer.color <span class="green">// Color</span></code></pre>
+        <h3>Public Functions:</h3>
+        <pre><code class="language-cs">LineDrawer.Clear() <span class="green">// Removes all points.</span>
+LineDrawer.GetPoints() <span class="green">// Gets all points as a List&lt;Vector2&gt;.</span>
+LineDrawer.AddPoint(Vector2 vertex) <span class="green">// Adds a point at the given position (local).</span>
+LineDrawer.RemovePoint(int index) <span class="green">// Removes the point with the given ID.</span></code></pre>
+        <h3>Usage:</h3>
+        <pre><code class="language-cs">LineDrawer shape = new LineDrawer();
+<span class="green">// Creates a new LineDrawer not assigned to any object.</span></code></pre>
+        <p>How to assign to a GameObject?</p>
+        <pre><code class="language-cs">GameObject obj = new GameObject();
+LineDrawer lineDrawer = obj.AddComponent&lt;LineDrawer&gt;();</code></pre>
+
         <!-- TEXT -->
         <h2>Text</h2>
         <h3>Public Fields:</h3>
